@@ -1,0 +1,557 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --background-color: #1e1e1e;
+  --about-section-background-color: #EEEDE0;
+  --border-color: #7c7936;
+  --text-color: #FFFFFF;
+  --text-color-secondary: #000000;
+  --text-color-tertiary: #949380;
+}
+
+@font-face {
+  font-family: 'Alex Brush';
+  src: url('../assets/fonts/AlexBrush-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('../assets/fonts/Inter_18pt-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Extra-Light';
+  src: url('../assets/fonts/Inter_18pt-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hero-section{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url('../assets/images/calligraphy-pen.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-content{
+  font-family: 'Inter';
+  font-size: 1.3rem;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content span{
+  font-family: 'Inter-Light';
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.hero-content p{
+  font-family: 'Inter-Extra-Light';
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.hero-btn{
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--border-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background-color: transparent;
+  color: var(--text-color);
+  text-decoration: overline;
+}
+
+/* About Section */
+
+.about-section{
+  display: flex;
+  padding: 10%;
+  gap: 20px;
+  background-color: var(--about-section-background-color);
+}
+
+.about-text{
+  padding: 20px;
+}
+
+.about-text h1{
+  font-family: 'Inter', sans-serif;
+  font-size: 60px;
+  color: var(--text-color-secondary);
+}
+
+.about-text p{
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color-tertiary);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-link{
+  text-decoration: none;
+  color: var(--border-color);
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.interesting-section{
+  padding: 10%;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color-secondary);
+}
+
+.interesting-header{
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.interesting-section p{
+  color: var(--text-color-tertiary);
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.calligraphy-div{
+  width: 100%;
+  display: flex;  
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.calligraphy-div-div{
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.calligraphy-div-div:hover{
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+}
+
+.calligraphy-div-div p{
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  color: var(--text-color-secondary);
+}
+
+.calligraphy-div-div span{
+  color: var(--text-color-tertiary);
+}
+
+.calligraphy-icon-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calligraphy-icon{
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 8% 10%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.testimonials-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #2a2a2a;
+  padding: 20px 30px;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: var(--border-color);
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 8% 10%;
+  background-color: var(--about-section-background-color);
+  color: var(--text-color-secondary);
+  text-align: center;
+}
+
+.gallery-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-card {
+  background-color: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery Preview Section */
+.gallery-preview-section {
+  padding: 8% 10%;
+  text-align: center;
+  background-color: var(--about-section-background-color);
+}
+
+.gallery-preview-header {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.gallery-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-preview-card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-color-secondary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-preview-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-preview-card span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(30, 30, 30, 0.6);
+  color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+}
+
+.gallery-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.contact-info h2,
+.contact-form-section h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--text-color-secondary);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-form button.hero-btn {
+  width: fit-content;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--border-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-form button.hero-btn:hover {
+  opacity: 0.8;
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Responsive Styles */
+
+/* Tablets */
+@media screen and (max-width: 900px) {
+  .hero-section {
+    height: 60vh;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 5%;
+    gap: 15px;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .interesting-section p {
+    width: 100%;
+  }
+
+  .calligraphy-div {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .calligraphy-div-div {
+    flex: 1 1 45%;
+    padding: 10px;
+  }
+
+  .gallery-preview-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .gallery-preview-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .testimonials-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .hero-section {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+
+  .hero-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .calligraphy-div-div {
+    flex: 1 1 100%;
+  }
+
+  .gallery-preview-card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonials-header,
+  .gallery-preview-header {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 15px 20px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+}

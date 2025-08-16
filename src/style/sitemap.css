@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --background-color: #1e1e1e;
+  --border-color: #7c7936;
+  --footer-text-color: #EBE9CF;
+  --text-color: #FFFFFF;
+}
+
+@font-face {
+  font-family: 'Alex Brush';
+  src: url('../assets/fonts/AlexBrush-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sitemap {
+  padding: 40px;
+  font-family: 'Inter', sans-serif;
+  color: var(--header-text-color);
+}
+
+.sitemap h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--border-color);
+}
+
+.sitemap ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.sitemap ul li {
+  margin: 8px 0;
+}
+
+.sitemap ul li a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-size: 16px;
+}
+
+.sitemap ul li a:hover {
+  color: var(--border-color);
+  text-decoration: underline;
+}

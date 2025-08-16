@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --background-color: #1e1e1e;
+  --about-section-background-color: #EEEDE0;
+  --border-color: #7c7936;
+  --text-color: #FFFFFF;
+  --text-color-secondary: #000000;
+  --text-color-tertiary: #949380;
+}
+
+@font-face {
+  font-family: 'Alex Brush';
+  src: url('../assets/fonts/AlexBrush-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('../assets/fonts/Inter_18pt-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Extra-Light';
+  src: url('../assets/fonts/Inter_18pt-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ==========================
+   Gallery Page Styling
+========================== */
+
+.gallery-page {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 50px 10%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== Category Navigation ===== */
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.gallery-nav a {
+  text-decoration: none;
+  color: var(--border-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.gallery-nav a:hover {
+  color: #a59f5b;
+  transform: scale(1.05);
+}
+
+/* ===== Gallery Section ===== */
+section {
+  margin-bottom: 80px;
+}
+
+/* Section Title */
+section h2 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--border-color);
+  margin-bottom: 30px;
+}
+
+/* Grid for Images */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Image Styling */
+.gallery-item {
+  flex: 1 1 250px; /* flexible width with minimum 250px */
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-item {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .gallery-nav {
+    gap: 15px;
+  }
+
+  .gallery-nav a {
+    font-size: 1rem;
+  }
+}
