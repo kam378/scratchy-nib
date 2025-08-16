@@ -4,10 +4,10 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import FeedBacks from "./pages/feedbacks";
+import FeedBacks from "./pages/Feedbacks";
 import Gallery from "./pages/Gallery";
 import Sitemap from "./pages/Sitemap";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 
 function App() {
