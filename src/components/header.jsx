@@ -6,7 +6,7 @@ import clockIcon from '../assets/icons/clock-icon.svg';
 import locationIcon from '../assets/icons/location-icon.svg';
 import searchIcon from '../assets/icons/search-icon.svg';
 import languageIcon from '../assets/icons/language-icon.svg';
-import barsIcon from '../assets/icons/bars-icon.svg'; // new hamburger icon
+import barsIcon from '../assets/icons/bars-icon.svg'; 
 
 function Header() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -15,6 +15,7 @@ function Header() {
   const searchInputRef = useRef(null);
 
   // Auto-focus search input
+
   useEffect(() => {
     if (showSearch && searchInputRef.current) {
       searchInputRef.current.focus();
