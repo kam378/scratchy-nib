@@ -533,6 +533,10 @@
     font-size: 0.9rem;
   }
 
+  .about-image{
+    max-width: 100%;
+  }
+
   .calligraphy-div-div {
     flex: 1 1 100%;
   }
