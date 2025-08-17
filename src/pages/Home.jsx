@@ -46,7 +46,7 @@ function Home() {
           </NavLink>
         </div>
         <div className="about-image">
-          <img src={aboutImage} alt="About Calligraphy" width={500} height={400} />
+          <img src={aboutImage} alt="About Calligraphy" width={200} height={100} />
         </div>
       </div>
 
