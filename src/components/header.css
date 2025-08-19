@@ -132,6 +132,9 @@ header{
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   position: relative;
+  padding: 10px;
+  overflow: visible;
+  border: 1px solid red;
 }
 
 .nav-link{
@@ -153,6 +156,8 @@ header{
 /* Dropdown Container */
 .nav-item-with-dropdown {
   position: relative;
+  border: 1px solid red;
+  z-index: 1000;
 }
 
 /* Dropdown Menu */
@@ -172,6 +177,8 @@ header{
 /* Show dropdown on hover */
 .nav-item-with-dropdown:hover .dropdown {
   display: flex;
+  z-index: 10000000000 !important;
+  border: 3px solid red;
 }
 
 /* Dropdown Links */
