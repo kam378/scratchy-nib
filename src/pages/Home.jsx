@@ -22,6 +22,7 @@ const testimonials = [
   { name: "Amelia Rose", text: "A perfect blend of tradition and creativity." },
 ];
 
+
 function Home() {
   return (
     <section className="main-container">
